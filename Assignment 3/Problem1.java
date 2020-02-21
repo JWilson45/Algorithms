@@ -22,18 +22,32 @@ public class Problem1 {
 
 		while (start <= end) {
 
-			mid = (start + end) / 2;
+			mid = (start + end) / 2;		// get the mid value based on the start and end index
 
+			// if mid is at index 0 and mid is x, the left bound has been found
+			// or if A[mid] is x and A[mid - 1] is less than x then left bound is found
 	   	if ((mid == 0 && A[mid] == x) || (A[mid] == x && A[mid - 1] < x)) {
+
+				// set end equial to mid - 1 to end the loop at the next iteration
 				end = mid - 1;
 				leftIndex = mid;
-	    }
+
+			}
+
+			// if A[mid] is less than x...
 	    else if (A[mid] < x) {
-	      start = mid + 1;
-	    }
-	    else {
-	      end = mid - 1;
-	    }
+
+				// discard the left portion of the search area.
+			  start = mid + 1;
+
+			}
+
+			else {
+
+				// else, discard the right portion of the serach area.
+			  end = mid - 1;
+
+			}
 
 		} // end while
 
@@ -42,7 +56,7 @@ public class Problem1 {
 
 		while (start <= end) {
 
-			mid = (start + end) / 2;
+			mid = (start + end) / 2;		// get the mid value based on the start and end index
 
 			if ((mid == A.length - 1 && A[mid] == x) || (A[mid] == x && A[mid + 1] > x)) {
 				start = mid + 1;
@@ -52,12 +66,14 @@ public class Problem1 {
 
 			else if (A[mid] > x) {
 
+				// discard the left portion of the search area.
 				end = mid - 1;
 
 			}
 
 			else {
 
+				// discard the left portion of the search area.
 				start = mid + 1;
 
 			}

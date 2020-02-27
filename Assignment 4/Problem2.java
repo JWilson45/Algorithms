@@ -1,3 +1,8 @@
+/*
+Jason Wilson
+Thursday, February 27th 2020
+CMPT435L 111 20S
+*/
 
 public class Problem2
 {
@@ -64,8 +69,6 @@ public static Min2ndMin dcfindmin2ndmin(int[] A, int i, int j)
 			}
 
 		}
-
-		System.out.println("Pair: " + pair.min + " " + pair.min2nd);
 
 		return pair;
 

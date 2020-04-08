@@ -390,10 +390,13 @@ public class BST implements Iterable
    public static Node findmin(Node root)
    {
 
+     // While a node to the left of the current node exists,
+     // traverse left
      while (root.left != null) {
        root = root.left;
      }
 
+     // return the left most node, which contains the min element
      return root;
 
    }
@@ -402,10 +405,13 @@ public class BST implements Iterable
    public static Node findmax(Node root)
    {
 
+     // While a node to the right of the current node exists,
+     // traverse right
      while (root.right != null) {
        root = root.right;
      }
 
+     // return the right most node, which contains the max element
      return root;
 
    }

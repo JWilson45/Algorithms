@@ -19,9 +19,9 @@ public class Coinchange {
 			// While the current coin (givencoin[i]) can fit within the given value...
 			while ((givenvalue - givencoins[i]) >= 0) {
 
-				//take the coin value away from the givenvalue
+				// Adjust the total based on the value of the coin taken and incriment the counter
 				givenvalue = givenvalue - givencoins[i];
-				//add 1 to number of coins needed
+
 				coins++;
 
 			}
